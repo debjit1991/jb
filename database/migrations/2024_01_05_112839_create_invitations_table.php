@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('invitations', function (Blueprint $table) {
+            $table->ulid('id')->primary();
+            $table->string('name');
+            $table->string('email')->index();
+            $table->string('designation');
+            $table->string('mobile', 10)->index();
+            $table->foreignUlid('role_id')->constrained();
+            $table->json('resources');
+            $table->string('link');
+            $table->foreignUlid('invited_by')->references('id')->on('users')->constrained();
+            $table->date('expiry_at');
+            $table->enum('status', ['Pending', 'Accepted', 'Expired'])->default('Pending')->index();
+            $table->date('accepted_at')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('invitations');
+    }
+};
