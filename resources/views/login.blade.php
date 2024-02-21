@@ -43,7 +43,7 @@
                         <form method="POST">
                             @csrf
                             <div>
-                                <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email</label>
+                                <label for="email" class="block text-sm font-medium leading-5 text-gray-700">mail</label>
                                 <div class="mt-1 relative rounded-md shadow-sm">
                                     <input id="email" name="email" placeholder="Enter your email" autocomplete="email" type="email"
                                         required="" value=""
@@ -54,7 +54,7 @@
                             <div class="mt-3">
                                 <label for="password"
                                     class="block text-sm font-medium leading-5 text-gray-700">Password</label>
-                                <div class="mt-1 rounded-md shadow-sm">
+                                <div class="mt-3 rounded-md shadow-sm">
                                     <input id="password" name="password" type="password" autocomplete="current-password" required=""
                                         class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
                                 </div>
@@ -103,6 +103,12 @@
         </div>
     </div>
 </body>
+
+
+
+
+
+
 <script>
     window.addEventListener("scroll", function () {
     const navigation = document.querySelector(".navigation");
