@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Scheme extends Model
+class BeneficiaryMasterInfo extends Model
 {
-    use HasFactory,HasUlids;
-    protected $table = 'm_schemes';
+    use HasFactory;
+    protected $table = 'm_beneficiary_info_masters';
     protected $guarded = [];
 }

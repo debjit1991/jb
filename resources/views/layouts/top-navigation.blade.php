@@ -110,13 +110,13 @@
         <div class="hidden w-px h-6 bg-gray-500" aria-hidden="true"></div>
         <div class="flex self-stretch flex-1 gap-x-4 sm:gap-x-6">
             <form class="relative flex flex-1" action="#" method="GET">
-                <label for="search-field" class="absolute w-px h-px p-0 -m-[1px] overflow-hidden [clip:rect(0,_0,_0,_0)] whitespace-nowrap border-0">
+                {{-- <label for="search-field" class="absolute w-px h-px p-0 -m-[1px] overflow-hidden [clip:rect(0,_0,_0,_0)] whitespace-nowrap border-0">
                     Search
-                </label>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="u aa as cg ph sb axp">
+                </label> --}}
+                {{-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="u aa as cg ph sb axp">
                     <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
-                </svg>
-                <input id="search-field" class="lu ph tn afa arn atr att axv bgd bnc cid" placeholder="Search..." type="search" name="search">
+                </svg> --}}
+                {{-- <input id="search-field" class="lu ph tn afa arn atr att axv bgd bnc cid" placeholder="Search..." type="search" name="search"> --}}
             </form>
             <div class="flex items-center gap-x-4 sm:gap-x-6">
                 <button type="button" class="p-1.5 axp bkx">

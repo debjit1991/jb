@@ -18,6 +18,9 @@ window.Swal = Swal;
 import flatpickr from "flatpickr";
 window.flatpickr = flatpickr;
 
+import Pikaday from "pikaday";
+window.Pikaday = Pikaday;
+
 import tippy from "tippy.js";
 tippy("[data-tippy-content]");
 

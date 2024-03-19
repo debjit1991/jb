@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\EnsureInvitationIsValid;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,8 +31,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('users', App\Http\Controllers\UserController::class)->only(['index', 'create', 'edit']);
-
     Route::get('users/{user}/permissions', [App\Http\Controllers\UserPermissionController::class, 'edit'])->name('users.permissions');
+
+    Route::get('jb-form', [App\Http\Controllers\JbformController::class,'index'])->name('jb-form.index');
+    Route::get('/PensionForm', [App\Http\Controllers\JbformController::class, 'PensionForm'])->name('PensionFormgetdata.PensionForm');
+
+   
     Route::resources([
         'roles' => App\Http\Controllers\RoleController::class,
         'districts'                         =>  App\Http\Controllers\DistrictController::class,

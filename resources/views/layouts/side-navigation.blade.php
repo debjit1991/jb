@@ -36,6 +36,15 @@
                     {{ __('Permissions') }}
                 </x-nav-link>
                 @endcanany
+              
+
+               
+                <x-nav-link :href="route('jb-form.index')" :active="request()->routeIs('jb-form.index')">
+                    <svg class="h-8 w-8 text-yellow-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="5" y="3" width="14" height="18" rx="2" />  <line x1="9" y1="7" x2="15" y2="7" />  <line x1="9" y1="11" x2="15" y2="11" />  <line x1="9" y1="15" x2="13" y2="15" />
+                      </svg>
+                    {{ __('New Application Entry') }}
+                </x-nav-link>
+               
 
                 @canany(['read user', 'create user', 'update user', 'delete user'])
                 <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
